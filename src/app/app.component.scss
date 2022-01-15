@@ -1,0 +1,24 @@
+.left-sidebar{
+    position: fixed;
+}
+.e-group{
+    width: 100%;
+}
+.e-text{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 0px;
+    list-style: none;
+    transition: 1s;
+    color: white;
+    box-shadow: var(--box-shadow-small);
+}
+
+.e-text:hover{
+    background-color: var(--color-burned_eggplant);
+    cursor: auto;
+}
+
+.margin-top-15-nega{margin-top: -15px;}
+.left-content{margin-left: 184px;}
