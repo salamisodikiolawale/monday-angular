@@ -1,4 +1,61 @@
 #container{
-    height: 100vh;
+    background-color:var(--color-placeholder_light_gray);
+}
+#header-space{
+    background-color: #FFFFFF;
+    box-shadow: var(--box-shadow-small);
+}
+#suggestion-container, #autres-composants, #bloc-secondaire{
+    background-color: #FFFFFF;
+}
+
+.btn-avis{
+    background-color: #FFFFFF;
+}
+
+.btn-search{
+    background-color: var(--color-dark_blue);
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.btn-avis, .btn-search{
+    width:200px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*Autre autres-composants*/
+#autres-composants, #suggestion-container{
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-small);
+}
+.liste-reception, .liste-recent, .liste-travail{
+    border: none;
+    box-shadow: var(--box-shadow-small);
+    border-radius: 8px;
+}
+.liste-reception .mail-recu, .liste-recent .recent-recu, .liste-travail .travail-recu{
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0;
     
 }
+.liste-reception .mail-recu:hover, .liste-recent .recent-recu:hover{
+    background-color: #F2F2F2;
+    margin: 0;
+}
+
+.liste-travail .travail-recu:hover{
+    border: none;
+    box-shadow: var(--box-shadow-small);
+    border-radius: 8px;
+}
+
+hr{margin: 0;}
+
+
