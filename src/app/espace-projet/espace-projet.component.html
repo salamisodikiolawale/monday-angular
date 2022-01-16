@@ -23,8 +23,8 @@
             </div>
 
             <section class="explaires-suggestions display-flex align-between">
-                <section class="exp-suggestion width-50 height-200px padding-5  display-flex align-center"  *ngFor="let mail of mails; let index = index">
-                    <p class="image"><img class="img-suggestion" src='{{ "assets/images/" + mail.url}}' alt=""></p>
+                <section class="exp-suggestion width-50 height-200px padding-5  display-flex align-center"  *ngFor="let suggestion of suggestions; let index = index">
+                    <p class="image"><img class="img-suggestion" src='{{ "assets/images/" + suggestion.url}}' alt=""></p>
                 </section>
             </section>
         </section>

@@ -19,17 +19,4 @@ export class AppComponent implements OnInit{
     ).subscribe( v => console.log(v))
   }
 
-
-  @ViewChild('dockBar') dockBar?: SidebarComponent;
-  public enableDock: boolean = true;
-  public width: string = '220px';
-  public dockSize: string = '70px';
-  
-  toggleClick() {
-      this.dockBar?.toggle();
-  }
-
-
-
-
 }
