@@ -11,12 +11,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EspaceProjetComponent } from './espace-projet/espace-projet.component';
+import { EspaceTravailComponent } from './espace-travail/espace-travail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EspaceProjetComponent,
+    EspaceTravailComponent,
   ],
   imports: [
     BrowserModule,
