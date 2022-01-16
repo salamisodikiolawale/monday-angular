@@ -8,16 +8,33 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 })
 export class EspaceProjetComponent implements OnInit {
 
-  public mails:Array<{nom:string, url:any, jour:number}>=[
+  public mails:Array<{nom:string, jour:number}>=[
     {
       nom:"Danie",
-      url: "backoffice1.png",
       jour:2
     },
     {
       nom:"Danie",
-      url: "backoffice2.png",
       jour:2
+    },
+    {
+      nom:"Danie",
+      jour:2
+    }
+  ];
+
+  public suggestions:Array<{nom:string, url:any}>=[
+    {
+      nom:"Danie",
+      url: "backoffice1.png",
+    },
+    {
+      nom:"Danie",
+      url: "backoffice2.png",
+    },
+    {
+      nom:"Danie",
+      url: "backoffice1.png",
     }
   ];
 
