@@ -5,8 +5,12 @@
     background-color: #FFFFFF;
     box-shadow: var(--box-shadow-small);
 }
-#suggestion-container, #autres-composants, #bloc-secondaire{
+#suggestion-container, #autres-composants{
     background-color: #FFFFFF;
+}
+
+.img-suggestion{
+    width: 300px;
 }
 
 .btn-avis{
@@ -59,3 +63,17 @@
 hr{margin: 0;}
 
 
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+.radio-button {
+    margin: 5px;
+  }
+
+.icon-radio{
+    font-size: 20px;
+}

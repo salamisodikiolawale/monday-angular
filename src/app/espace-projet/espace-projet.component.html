@@ -22,15 +22,9 @@
                 <button>Pacourer tous les modèles</button>
             </div>
 
-            <section class="explaires-suggestions display-flex flex-row border-black align-between">
-                <section class="exp-suggestion width-50 border-black height-200px padding-5">
-                    <h2>suggestion 1</h2>
-                </section>
-                <section class="exp-suggestion width-50 border-black height-200px padding-5">
-                    <h2>suggestion 2</h2>
-                </section>
-                <section class="exp-suggestion width-50 border-black height-200px padding-5">
-                    <h2>suggestion 3</h2>
+            <section class="explaires-suggestions display-flex align-between">
+                <section class="exp-suggestion width-50 height-200px padding-5  display-flex align-center"  *ngFor="let mail of mails; let index = index">
+                    <p class="image"><img class="img-suggestion" src='{{ "assets/images/" + mail.url}}' alt=""></p>
                 </section>
             </section>
         </section>
@@ -43,30 +37,16 @@
                     <div class="nbr-mail-reception">4</div>
                 </div>
                 <div class="liste-reception padding-25">
-                    <div class="mail-recu display-flex align-between">
-                        <div>
-                            <span class="image">image</span>
-                            <span class="prenom">Daniel</span>
+                    <div *ngFor="let mail of mails; let index = index">
+                        <div class="mail-recu display-flex align-between">
+                            <div>
+                                <span class="image"><img  src='' alt=""></span>
+                                <span class="prenom">{{mail.nom}}</span>
+                            </div>
+                            <span class="nbr-j-recption">{{mail.jour}}-j</span>
                         </div>
-                        <span class="nbr-j-recption">il y 2j</span>
+                        <hr>
                     </div>
-                    <hr>
-                    <div class="mail-recu display-flex align-between">
-                        <div>
-                            <span class="image">image</span>
-                            <span class="prenom">Daniel</span>
-                        </div>
-                        <span class="nbr-j-recption">il y 2j</span>
-                    </div>
-                    <hr>
-                    <div class="mail-recu display-flex align-between">
-                        <div>
-                            <span class="image">image</span>
-                            <span class="prenom">Daniel</span>
-                        </div>
-                        <span class="nbr-j-recption">il y 2j</span>
-                    </div>
-                    <hr>
                 </div>
             </div>
 
@@ -74,27 +54,16 @@
             <div class="recent padding-15">
                 <h4>Récent</h4>
                 <div class="liste-recent padding-25">
-                    <div class="recent-recu display-flex align-between">
-                        <div>
-                            <span class="title">Projet client</span>
+                    <div *ngFor="let recent of recents; let index = index">
+                        <div class="recent-recu display-flex align-between">
+                            <div>
+                                <span class="title">{{recent.titre}}</span>
+                            </div>
+                            <mat-icon *ngIf="recent.cocher">stars</mat-icon>
                         </div>
-                        <mat-icon>stars</mat-icon>
+                        <hr>
                     </div>
-                    <hr>
-                    <div class="recent-recu display-flex align-between">
-                        <div>
-                            <span class="title">Projet client</span>
-                        </div>
-                        <mat-icon>stars</mat-icon>
-                    </div>
-                    <hr>
-                    <div class="recent-recu display-flex align-between">
-                        <div>
-                            <span class="title">Projet client</span>
-                        </div>
-                        <mat-icon>stars</mat-icon>
-                    </div>
-                    <hr>
+                   
                 </div>
             </div>
 
@@ -122,8 +91,47 @@
         </section>
     </div>
 
-    <div id="bloc-secondaire" class="width-20 padding-15">
-        <h1>secondlaire</h1>
-    </div>
+    <section id="bloc-secondaire" class="width-30">
+
+        <div>
+            <div class="complete-profil padding-15 bd-radius-5 back-color-white bd-radius-5">
+                <div class="display-flex align-between">
+                    <h3>Compléter votre profil</h3>
+                    <button class="btn-close"><mat-icon>close</mat-icon></button>
+                </div>
+                <div class="display-flex flex-column">
+                    <span *ngFor="let lstActProfil of listeActionProfil" class="display-flex">
+                        <mat-icon *ngIf="lstActProfil.active" class="icon-radio">radio_button_checked</mat-icon>
+                        <mat-icon *ngIf="!lstActProfil.active" class="icon-radio">radio_button_unchecked</mat-icon>
+                        <a href="#" class="padding-left-15">{{lstActProfil.titre}}</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="bar-de-suivi complete-profil padding-15 back-color-white bd-top">
+
+            </div>
+        </div>
+
+        <h2>Apprendre et trouver des idées</h2>
+        
+        <div class="margin-5 back-color-white padding-5 bd-radius-5">
+            <img src="#" alt="">
+            <p>Démarrer</p>
+            <p>Découvrez comment nous fonctionnons</p>
+        </div>
+
+        <div class="margin-5 back-color-white padding-5 bd-radius-5">
+            <img src="#" alt="">
+            <p>Démarrer</p>
+            <p>Découvrez comment nous fonctionnons</p>
+        </div>
+
+        <div class="margin-5 back-color-white padding-5 bd-radius-5">
+            <img src="#" alt="">
+            <p>Démarrer</p>
+            <p>Découvrez comment nous fonctionnons</p>
+        </div>
+    </section>
 
 <div>

@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 // Imported syncfusion sidebar module from navigations package
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import {MatIconModule} from '@angular/material/icon'
-
+import {MatRadioModule} from '@angular/material/radio';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,11 +23,13 @@ import { EspaceProjetComponent } from './espace-projet/espace-projet.component';
     AppRoutingModule,
     HttpClientModule,
     SidebarModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ],
   exports:[
     SidebarModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
