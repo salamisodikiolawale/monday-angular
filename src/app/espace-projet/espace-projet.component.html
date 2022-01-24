@@ -17,7 +17,7 @@
         <section id="suggestion-container" class="border-green padding-15">
 
             <button class="btn-close"><mat-icon>close</mat-icon></button>
-            <div class="display-flex flex-row">
+            <div class="display-flex fx-row">
                 <div class="suggestion-title"><h5>Commencez à l'aide de modèles prêts à l'emploi.</h5></div>
                 <button>Pacourer tous les modèles</button>
             </div>
@@ -99,7 +99,7 @@
                     <h3>Compléter votre profil</h3>
                     <button class="btn-close"><mat-icon>close</mat-icon></button>
                 </div>
-                <div class="display-flex flex-column">
+                <div class="display-flex fx-column">
                     <span *ngFor="let lstActProfil of listeActionProfil" class="display-flex">
                         <mat-icon *ngIf="lstActProfil.active" class="icon-radio">radio_button_checked</mat-icon>
                         <mat-icon *ngIf="!lstActProfil.active" class="icon-radio">radio_button_unchecked</mat-icon>

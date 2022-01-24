@@ -113,8 +113,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /*All Flex Styles*/
 .display-flex{ display: flex; }
-.flex-row{ flex-direction: row; }
-.flex-column{ flex-direction: column; }
+.fx-row{ flex-direction: row; }
+.fx-column{ flex-direction: column; }
+.fx-sp-between{justify-content: space-between;}
 
 /*Positionnelent*/
 .align-center{justify-content: center;}

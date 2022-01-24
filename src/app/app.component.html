@@ -1,14 +1,14 @@
-<div  id="container" class="display-flex flex-row">
+<div  id="container" class="display-flex fx-row">
 
-    <div class="left-sidebar height-100 width-10 padding-0 margin-O border-right">
+    <div class="left-sidebar height-100 width-10 padding-0 margin-O border-right display-flex fx-column fx-sp-between">
 
         <ul class="e-group padding-0 margin-O">
 
-            <li class="e-text margin-top-15-nega">
+            <li class="e-text margin-top-15-nega" routerLink="espace-projet">
                 <mat-icon>home</mat-icon>
                 <span class="padding-left-15" title="Espace de travail">espace projet</span>
             </li>
-            <li class="e-text">
+            <li class="e-text"  routerLink="espace-travail">
                 <mat-icon>dashboard</mat-icon>
                 <span class="padding-left-15" title="Espace de travail">Espace de travail</span>
             </li>
@@ -27,12 +27,26 @@
                 <span class="padding-left-15" title="Mon travail">Mon travail</span>
             </li>
         </ul>
+
+        <ul class="e-group padding-0 margin-O">
+            <li>
+                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
+            </li>
+            <li>
+                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
+            </li>
+            <li>
+                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
+            </li>
+      
+        </ul>
     </div>
 
+   
     
 
 </div>
 
 <div class="left-content width-90 margin-left-50">
-    <app-espace-projet></app-espace-projet>
+    <router-outlet></router-outlet>
 </div>
