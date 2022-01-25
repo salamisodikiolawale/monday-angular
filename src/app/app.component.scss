@@ -20,6 +20,12 @@
     cursor: pointer;
 }
 
+.e-icon{
+    transition: 1s;
+    color: white;
+    align-items: center;
+}
+
 .e-text:hover{
     background-color: var(--color-burned_eggplant);
     cursor: auto;

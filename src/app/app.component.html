@@ -1,45 +1,49 @@
-<div  id="container" class="display-flex fx-row">
+<div  id="container" class="d-fx fx-row">
 
-    <div class="left-sidebar height-100 width-10 padding-0 margin-O border-right display-flex fx-column fx-sp-between">
+    <div class="left-sidebar h-100 w-10 p-0 m-O bd-r d-fx fx-column fx-sp-between">
 
-        <ul class="e-group padding-0 margin-O">
+        <ul class="e-group p-0 m-O">
 
-            <li class="e-text margin-top-15-nega" routerLink="espace-projet">
+            <li class="e-text mt-15-nega" routerLink="espace-projet">
                 <mat-icon>home</mat-icon>
-                <span class="padding-left-15" title="Espace de travail">espace projet</span>
+                <span class="pl-15" title="Espace de travail">espace projet</span>
             </li>
             <li class="e-text"  routerLink="espace-travail">
                 <mat-icon>dashboard</mat-icon>
-                <span class="padding-left-15" title="Espace de travail">Espace de travail</span>
+                <span class="pl-15" title="Espace de travail">Espace de travail</span>
             </li>
             <li class="e-text">
                 <mat-icon>notification_important</mat-icon>
-                <span class="padding-left-15" title="Notifacation">Notifacation</span>
+                <span class="pl-15" title="Notifacation">Notifacation</span>
             </li>
 
             <li class="e-text">
                 <mat-icon>markunread_mailbox</mat-icon>
-                <span class="padding-left-15" title="Boite de réception">Boite de réception</span>
+                <span class="pl-15" title="Boite de réception">Boite de réception</span>
             </li>
 
             <li class="e-text">
                 <mat-icon>view_agenda</mat-icon>
-                <span class="padding-left-15" title="Mon travail">Mon travail</span>
+                <span class="pl-15" title="Mon travail">Mon travail</span>
             </li>
         </ul>
 
-        <ul class="e-group padding-0 margin-O">
-            <li>
-                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
-            </li>
-            <li>
-                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
-            </li>
-            <li>
-                <mat-icon class="padding-left-15" title="Login">supervised_user_circle</mat-icon>
-            </li>
-      
-        </ul>
+        <div class="d-fx fx-row">
+            <ul class="e-group p-0 m-O d-fx fx-column">
+                <li class="e-icon d-fx align-center p-15">
+                    <mat-icon  title="help">help</mat-icon>
+                </li>
+                <li class="e-icon d-fx align-center p-15">
+                    <mat-icon  title="search">search</mat-icon>
+                </li>
+                <li class="e-icon d-fx align-center p-15" (click)="isShowProfile = !isShowProfile">
+                    <mat-icon  title="Login">supervised_user_circle</mat-icon>
+                </li>
+        
+            </ul>
+            <app-profile-popup *ngIf="isShowProfile"></app-profile-popup>
+
+        </div>
     </div>
 
    
@@ -47,6 +51,6 @@
 
 </div>
 
-<div class="left-content width-90 margin-left-50">
+<div class="left-content w-90 ml-50">
     <router-outlet></router-outlet>
 </div>

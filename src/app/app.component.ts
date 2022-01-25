@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 
 @Component({
@@ -8,7 +8,9 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
   title = 'monday-angular';
+  isShowProfile:boolean=false
 
   constructor(private http: HttpClient){}
 
@@ -18,5 +20,6 @@ export class AppComponent implements OnInit{
     }
     ).subscribe( v => console.log(v))
   }
+
 
 }
