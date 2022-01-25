@@ -14,6 +14,9 @@ import { EspaceProjetComponent } from './espace-projet/espace-projet.component';
 import { EspaceTravailComponent } from './espace-travail/espace-travail.component';
 import { ProfilePopupComponent } from './profile-popup/profile-popup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { ProfileComponent } from './profile/profile.component';
     EspaceTravailComponent,
     ProfilePopupComponent,
     ProfileComponent,
+    SigninComponent,
+    SignupComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
