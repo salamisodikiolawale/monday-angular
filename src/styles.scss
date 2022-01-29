@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { l: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 :root {
 
@@ -112,7 +112,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 /*All Flex Styles*/
-.display-flex{ display: flex; }
+.d-fx{ display: flex; }
 .fx-row{ flex-direction: row; }
 .fx-column{ flex-direction: column; }
 .fx-sp-between{justify-content: space-between;}
@@ -124,54 +124,56 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 /*All border*/
-.border-red{border: 1px solid red;}
-.border-blue{border: 1px solid blue;}
-.border-black{border: 1px solid black;}
-.border-green{border: 1px solid green;}
-.border-right{border-right: 1px solid white;}
+.bc-red{border: 1px solid red;}
+.bc-blue{border: 1px solid blue;}
+.bc-black{border: 1px solid black;}
+.bc-green{border: 1px solid green;}
+
+.bd-r{border-right: 1px solid white;}
 
 .bd-top{border-top: 1px solid dimgray;}
 
 /*margin*/
-.margin-0{margin: 0px;}
-.margin-5{margin: 5px;}
-.margin-10{margin: 10px;}
-.margin-15{margin: 15px;}
-.margin-right-50{margin-right: 250px;}
-.margin-right-15{margin-right: 15px;}
-.margin-top-15{margin-top: 15px;}
-.margin-left-50{margin-right: 250px;}
+.m-0{margin: 0px;}
+.m-5{margin: 5px;}
+.m-10{margin: 10px;}
+.m-15{margin: 15px;}
+.mr-50{margin-right: 250px;}
+.mr-15{margin-right: 15px;}
+.mt-15{margin-top: 15px;}
+.mb-15{margin-bottom: 500px;}
+.ml-50{margin-right: 250px;}
 
-/*padding*/
-.padding-0{padding: 0px;}
-.padding-5{padding: 5px;}
-.padding-10{padding: 10px;}
-.padding-15{padding: 15px;}
-.padding-25{padding: 25px;}
-.padding-20{padding: 20px;}
-.padding-left-15{padding-left: 15px;}
-.padding-top-25{padding-top: 25px;}
-.padding-bottom-25{padding-bottom: 25px;}
-.padding-right-25{padding-right: 25px;}
-.padding-left-25{padding-left: 25px;}
+/*p*/
+.p-0{padding: 0px;}
+.p-5{padding: 5px;}
+.p-10{padding: 10px;}
+.p-15{padding: 15px;}
+.p-25{padding: 25px;}
+.p-20{padding: 20px;}
+.pl-15{padding-left: 15px;}
+.pt-25{padding-top: 25px;}
+.pb-25{padding-bottom: 25px;}
+.pr-25{padding-right: 25px;}
+.pl-25{padding-left: 25px;}
 
 /*Width*/
-.width-10{width: 10%;}
-.width-20{width: 20%;}
-.width-30{width: 30%;}
-.width-40{width: 40%;}
-.width-50{width: 50%;}
-.width-90{width: 90%;}
-.width-80{width: 80%;}
-.width-70{width: 70%;}
-.width-100{width: 100%;}
+.w-10{width: 10%;}
+.w-20{width: 20%;}
+.w-30{width: 30%;}
+.w-40{width: 40%;}
+.w-50{width: 50%;}
+.w-90{width: 90%;}
+.w-80{width: 80%;}
+.w-70{width: 70%;}
+.w-100{width: 100%;}
 
 /*Height*/
-.height-100{height: 100vh;}
-.height-200px{height: 200px;}
-.height-50{height: 50px;}
-.height-75{height: 75px;}
-.height-20{height: 20px;}
+.h-100{height: 100vh;}
+.h-200px{height: 200px;}
+.h-50{height: 50px;}
+.h-75{height: 75px;}
+.h-20{height: 20px;}
 
 .bd-radius-5{border-radius: 5px;}
 .bd-radius-10{border-radius: 10px;}
