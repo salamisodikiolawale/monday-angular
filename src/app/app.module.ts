@@ -7,6 +7,7 @@ import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import {MatIconModule} from '@angular/material/icon'
 import {MatRadioModule} from '@angular/material/radio';
 
+import { ProfileService } from './shares/services/profile.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +43,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatIconModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [ProfileService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

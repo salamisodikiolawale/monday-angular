@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { DataUser } from '../shares/interfaces/dataUser.interface';
+import { ProfileService } from '../shares/services/profile.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -13,9 +17,14 @@ export class ProfileComponent implements OnInit {
     "Mot de passe",
     "Préférences",
   ]
-  constructor() { }
+
+  public currenteDataUser?: Observable<DataUser|null>;
+  
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
+    this.currenteDataUser = this.profileService.getCurrentDataUser();
   }
+
 
 }

@@ -116,6 +116,10 @@ body { l: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .fx-row{ flex-direction: row; }
 .fx-column{ flex-direction: column; }
 .fx-sp-between{justify-content: space-between;}
+.center{
+    align-items: center;
+    justify-content: center;
+}
 
 /*Positionnelent*/
 .align-center{justify-content: center;}
@@ -198,6 +202,10 @@ a{
 a:hover{
     color: #00c875;
     text-decoration: underline;
+}
+
+li{
+    list-style: none;
 }
 
 

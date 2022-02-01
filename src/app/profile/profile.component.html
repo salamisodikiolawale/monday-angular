@@ -1,16 +1,76 @@
-<header>
+<header class="d-fx fx-row  fx-sp-between m-0">
 
+    <div class="align-center w-100 d-fx fx-column m-0">
+
+        <div class="d-fx fx-column center p-25 m-0">
+            <mat-icon  title="Login">supervised_user_circle</mat-icon>
+            <span>SALAMI Sodiki Olawalé</span>
+        </div>
+    
+        <ul class="d-fx align-center m-0">
+            <li *ngFor="let menu of menus" class="p-15">{{menu}}</li>
+        </ul>
+    </div>
+
+    <div class="btn-language m-10">
+        <button class="p-10">language</button>
+    </div>
+   
 </header>
 
-<div class="body">
-    <mat-icon  title="Login">supervised_user_circle</mat-icon>
-    <span>SALAMI Sodiki Olawalé</span>
+<div class="body d-fx align-center p-25">
 
-    <ul *ngFor="let menu of menus">
-        <li>{{menu}}</li>
-    </ul>
+    <div class="pt-25">
+        <h4>Vue d'ensemble</h4>
+        <div *ngIf="currenteDataUser| async; let currentData;">
+
+            <div>
+                <mat-icon>diverm_identity</mat-icon>
+                <p style="color: red;">{{currentData.name}}</p>
+            </div>    
+        
+            <div>
+                <mat-icon>mail_outline</mat-icon>
+                {{currentData.email}}
+            </div>   
+        
+            <div>
+                <mat-icon>settings_cell</mat-icon>
+                {{currentData.phone}}
+            </div>   
+        
+            <div>
+                <mat-icon>public</mat-icon>
+                {{currentData.skype}}
+            </div>   
+        
+            <div>
+                <mat-icon>location_on</mat-icon>
+                {{currentData.lieu}}
+            </div>  
+            
+            <div>
+                <mat-icon>location_on</mat-icon>
+                {{currentData.fuseau}}
+            </div>  
+        
+            <div>
+                <mat-icon>location_on</mat-icon>
+                {{currentData.anniversaire}}
+            </div>  
+        </div>
+    
+        <hr>
+    
+        <h4>Equipes</h4>
+        <p>
+            C’est vide par ici :(
+            En rejoignant des équipes, vous pouvez suivre les projets qui vous intéressent, et vous permettez aux autres d’en apprendre plus sur vous. Découvrir toutes les équipes
+        </p>
+
+    </div>
 </div>
 
-<footer>
+<footer class="#">
     <p>Découvrez ce que fait sodikiolawale</p>
 </footer>
