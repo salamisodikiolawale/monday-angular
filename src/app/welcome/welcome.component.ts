@@ -12,4 +12,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout():void{
+    localStorage.setItem('jwt', '')
+  }
 }

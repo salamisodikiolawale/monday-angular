@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
-import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
+import { AuthService } from './shares/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +9,11 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 export class AppComponent implements OnInit{
 
   title = 'monday-angular';
-  isShowProfile:boolean=false
+  
 
-  constructor(private http: HttpClient){}
+  constructor(private authService:AuthService){}
 
   ngOnInit(): void {
-    // this.http.get('http://localhost:3000', {
-    //   responseType: 'text' as 'json'
-    // }
-    // ).subscribe( v => console.log("v"))
   }
 
 

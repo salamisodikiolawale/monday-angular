@@ -1,1 +1,36 @@
-<p>signin works!</p>
+<div class="container">
+    <header>
+        <h1>monday</h1>
+    </header>
+
+    <div class="body">
+            <form class="form-container" [formGroup]="form">
+                <p>Connexion à votre compte</p>
+                <div>
+                    <label>Saisissez votre e-mail professionnel</label>
+                    <input type="email" name="email" id="email" formControlName="email">
+                </div>
+                <div>
+                    <p>Saisissez votre mot de passe</p>
+                    <input type="password" name="password" id="password" formControlName="password">
+                </div>
+                <span *ngIf="error">{{error}}</span>
+                <button (click)="submit()">Connexion</button>
+            </form>
+            
+            <div class="#">
+                <hr>
+                Ou connectez-vous avec
+                <hr>
+            </div>
+
+            <div>
+                <div>
+                    <span>Google</span>
+                    <span>Slack</span>
+                </div>
+                <p>Vous n'avez pas encore de compte ? <a href="#"> S’inscrire</a></p>
+            </div>
+    </div>
+
+</div>

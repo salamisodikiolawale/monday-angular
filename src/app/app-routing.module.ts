@@ -9,14 +9,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthGuard } from './shares/guards/auth.guard';
 
 
 
 const routes: Routes = [
 
-  { path: 'welcome', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent },
   { path: 'espace-travail', component: EspaceTravailComponent },
-  { path: 'espace-projet', component: EspaceProjetComponent },
+  { path: 'espace-projet', canActivate:[AuthGuard], component: EspaceProjetComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'sigin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },

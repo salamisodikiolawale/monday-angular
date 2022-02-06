@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding-top: 25px;
+    
+    ul{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .btn-group{
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+    }
+
+}

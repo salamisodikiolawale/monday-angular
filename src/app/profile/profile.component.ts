@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { DataUser } from '../shares/interfaces/dataUser.interface';
-import { ProfileService } from '../shares/services/profile.service';
+// import { DataUser } from '../shares/interfaces/dataUser.interface';
+// import { ProfileService } from '../shares/services/profile.service';
 
 
 @Component({
@@ -18,12 +18,12 @@ export class ProfileComponent implements OnInit {
     "Préférences",
   ]
 
-  public currenteDataUser?: Observable<DataUser|null>;
+  public currenteDataUser?: Observable<null>;
   
-  constructor(private profileService: ProfileService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.currenteDataUser = this.profileService.getCurrentDataUser();
+    // this.currenteDataUser = this.profileService.getCurrentDataUser();
   }
 
 

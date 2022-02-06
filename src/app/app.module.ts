@@ -6,8 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import {MatIconModule} from '@angular/material/icon'
 import {MatRadioModule} from '@angular/material/radio';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { ProfileService } from './shares/services/profile.service';
+// import { ProfileService } from './shares/services/profile.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,13 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+//Service
+import { AuthService } from './shares/services/auth.service';
+import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
+
+//guards
+import { AuthGuard } from './shares/guards/auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +37,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ProfileComponent,
     SigninComponent,
     SignupComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    LeftSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,14 +46,16 @@ import { WelcomeComponent } from './welcome/welcome.component';
     HttpClientModule,
     SidebarModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   exports:[
     SidebarModule,
     MatIconModule,
     MatRadioModule
   ],
-  providers: [ProfileService],
+  providers: [AuthService, AuthGuard],
   
   bootstrap: [AppComponent]
 })

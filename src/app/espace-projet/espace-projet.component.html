@@ -1,137 +1,140 @@
-<div id="header-space" class="p-15 d-fx align-end">
-    <div class="w-100">
-        <h4>Bonsoir Sodikiolawale,</h4>
-        <h4> pouvez être satisfait(e) de ce que vous avez accompli aujourd'hui !</h4>
+<app-left-sidebar></app-left-sidebar>
+<div class="ml-50">
+    <div id="header-space" class="p-15 d-fx align-end">
+        <div class="w-100">
+            <h4 *ngIf="jwtToken.isAuthenticated">Bonsoir Sodikiolawale,</h4>
+            <h4> pouvez être satisfait(e) de ce que vous avez accompli aujourd'hui !</h4>
+        </div>
+        <div class="btn-group d-fx">
+            <button class="btn-avis">Donnez votre avis</button>
+            <button class="btn-search"> Recherche rapide</button>
+        </div>
+
     </div>
-    <div class="btn-group d-fx">
-        <button class="btn-avis">Donnez votre avis</button>
-        <button class="btn-search"> Recherche rapide</button>
-    </div>
 
-</div>
+    <div id="container" class="d-fx p-20 align-center">
 
-<div id="container" class="d-fx p-20 align-center">
+        <div id="bloc-principal" class="w-100 mr-15">
 
-    <div id="bloc-principal" class="w-100 mr-15">
+            <section id="suggestion-container" class="bc-green p-15">
 
-        <section id="suggestion-container" class="bc-green p-15">
+                <button class="btn-close"><mat-icon>close</mat-icon></button>
+                <div class="d-fx fx-row">
+                    <div class="suggestion-title"><h5>Commencez à l'aide de modèles prêts à l'emploi.</h5></div>
+                    <button>Pacourer tous les modèles</button>
+                </div>
 
-            <button class="btn-close"><mat-icon>close</mat-icon></button>
-            <div class="d-fx fx-row">
-                <div class="suggestion-title"><h5>Commencez à l'aide de modèles prêts à l'emploi.</h5></div>
-                <button>Pacourer tous les modèles</button>
-            </div>
-
-            <section class="explaires-suggestions d-fx align-between">
-                <section class="exp-suggestion w-50 h-200px p-5  d-fx align-center"  *ngFor="let suggestion of suggestions; let index = index">
-                    <p class="image"><img class="img-suggestion" src='{{ "assets/images/" + suggestion.url}}' alt=""></p>
+                <section class="explaires-suggestions d-fx align-between">
+                    <section class="exp-suggestion w-50 h-200px p-5  d-fx align-center"  *ngFor="let suggestion of suggestions; let index = index">
+                        <p class="image"><img class="img-suggestion" src='{{ "assets/images/" + suggestion.url}}' alt=""></p>
+                    </section>
                 </section>
             </section>
+
+            <section id="autres-composants" class="mt-15">
+
+                <div class="boite-reception p-15">
+                    <div class="d-fx">
+                        <h4>Boite de réception</h4>
+                        <div class="nbr-mail-reception">4</div>
+                    </div>
+                    <div class="liste-reception p-25">
+                        <div *ngFor="let mail of mails; let index = index">
+                            <div class="mail-recu d-fx align-between">
+                                <div>
+                                    <span class="image"><img  src='' alt=""></span>
+                                    <span class="prenom">{{mail.nom}}</span>
+                                </div>
+                                <span class="nbr-j-recption">{{mail.jour}}-j</span>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="recent p-15">
+                    <h4>Récent</h4>
+                    <div class="liste-recent p-25">
+                        <div *ngFor="let recent of recents; let index = index">
+                            <div class="recent-recu d-fx align-between">
+                                <div>
+                                    <span class="title">{{recent.titre}}</span>
+                                </div>
+                                <mat-icon *ngIf="recent.cocher">stars</mat-icon>
+                            </div>
+                            <hr>
+                        </div>
+                    
+                    </div>
+                </div>
+
+
+
+                <div class="recent p-15">
+                    <h4>Mes espaces de travail</h4>
+                    <div class="liste-travail p-25 d-fx align-between">
+                        <div class="travail-recu d-fx align-between w-50">
+                            <span class="image">image</span>
+                            <div>
+                                <span class="title">Espace de travail principal</span>
+                            </div>
+                        </div>
+
+                        <div class="travail-recu d-fx w-50 align-between">
+                            <span class="image">image</span>
+                            <div>
+                                <span class="title">Mon espace</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+        </div>
+
+        <section id="bloc-secondaire" class="w-30">
+
+            <div>
+                <div class="complete-profil p-15 bd-radius-5 back-color-white bd-radius-5">
+                    <div class="d-fx align-between">
+                        <h3>Compléter votre profil</h3>
+                        <button class="btn-close"><mat-icon>close</mat-icon></button>
+                    </div>
+                    <div class="d-fx fx-column">
+                        <span *ngFor="let lstActProfil of listeActionProfil" class="d-fx">
+                            <mat-icon *ngIf="lstActProfil.active" class="icon-radio">radio_button_checked</mat-icon>
+                            <mat-icon *ngIf="!lstActProfil.active" class="icon-radio">radio_button_unchecked</mat-icon>
+                            <a href="#" class="pl-15">{{lstActProfil.titre}}</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="bar-de-suivi complete-profil p-15 back-color-white bd-top">
+
+                </div>
+            </div>
+
+            <h2>Apprendre et trouver des idées</h2>
+            
+            <div class="m-5 back-color-white p-5 bd-radius-5">
+                <img src="#" alt="">
+                <p>Démarrer</p>
+                <p>Découvrez comment nous fonctionnons</p>
+            </div>
+
+            <div class="m-5 back-color-white p-5 bd-radius-5">
+                <img src="#" alt="">
+                <p>Démarrer</p>
+                <p>Découvrez comment nous fonctionnons</p>
+            </div>
+
+            <div class="m-5 back-color-white p-5 bd-radius-5">
+                <img src="#" alt="">
+                <p>Démarrer</p>
+                <p>Découvrez comment nous fonctionnons</p>
+            </div>
         </section>
 
-        <section id="autres-composants" class="mt-15">
-
-            <div class="boite-reception p-15">
-                <div class="d-fx">
-                    <h4>Boite de réception</h4>
-                    <div class="nbr-mail-reception">4</div>
-                </div>
-                <div class="liste-reception p-25">
-                    <div *ngFor="let mail of mails; let index = index">
-                        <div class="mail-recu d-fx align-between">
-                            <div>
-                                <span class="image"><img  src='' alt=""></span>
-                                <span class="prenom">{{mail.nom}}</span>
-                            </div>
-                            <span class="nbr-j-recption">{{mail.jour}}-j</span>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="recent p-15">
-                <h4>Récent</h4>
-                <div class="liste-recent p-25">
-                    <div *ngFor="let recent of recents; let index = index">
-                        <div class="recent-recu d-fx align-between">
-                            <div>
-                                <span class="title">{{recent.titre}}</span>
-                            </div>
-                            <mat-icon *ngIf="recent.cocher">stars</mat-icon>
-                        </div>
-                        <hr>
-                    </div>
-                   
-                </div>
-            </div>
-
-
-
-            <div class="recent p-15">
-                <h4>Mes espaces de travail</h4>
-                <div class="liste-travail p-25 d-fx align-between">
-                    <div class="travail-recu d-fx align-between w-50">
-                        <span class="image">image</span>
-                        <div>
-                            <span class="title">Espace de travail principal</span>
-                        </div>
-                    </div>
-
-                    <div class="travail-recu d-fx w-50 align-between">
-                        <span class="image">image</span>
-                        <div>
-                            <span class="title">Mon espace</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-        </section>
-    </div>
-
-    <section id="bloc-secondaire" class="w-30">
-
-        <div>
-            <div class="complete-profil p-15 bd-radius-5 back-color-white bd-radius-5">
-                <div class="d-fx align-between">
-                    <h3>Compléter votre profil</h3>
-                    <button class="btn-close"><mat-icon>close</mat-icon></button>
-                </div>
-                <div class="d-fx fx-column">
-                    <span *ngFor="let lstActProfil of listeActionProfil" class="d-fx">
-                        <mat-icon *ngIf="lstActProfil.active" class="icon-radio">radio_button_checked</mat-icon>
-                        <mat-icon *ngIf="!lstActProfil.active" class="icon-radio">radio_button_unchecked</mat-icon>
-                        <a href="#" class="pl-15">{{lstActProfil.titre}}</a>
-                    </span>
-                </div>
-            </div>
-
-            <div class="bar-de-suivi complete-profil p-15 back-color-white bd-top">
-
-            </div>
-        </div>
-
-        <h2>Apprendre et trouver des idées</h2>
-        
-        <div class="m-5 back-color-white p-5 bd-radius-5">
-            <img src="#" alt="">
-            <p>Démarrer</p>
-            <p>Découvrez comment nous fonctionnons</p>
-        </div>
-
-        <div class="m-5 back-color-white p-5 bd-radius-5">
-            <img src="#" alt="">
-            <p>Démarrer</p>
-            <p>Découvrez comment nous fonctionnons</p>
-        </div>
-
-        <div class="m-5 back-color-white p-5 bd-radius-5">
-            <img src="#" alt="">
-            <p>Démarrer</p>
-            <p>Découvrez comment nous fonctionnons</p>
-        </div>
-    </section>
-
-<div>
+    <div>
+</div>

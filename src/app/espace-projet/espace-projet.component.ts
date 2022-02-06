@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
+import { Subscription } from 'rxjs';
+import { JwtToken } from '../shares/models/JwtToken.model';
+import { AuthService } from '../shares/services/auth.service';
 
 @Component({
   selector: 'app-espace-projet',
@@ -66,10 +68,23 @@ export class EspaceProjetComponent implements OnInit {
       active:true
     },
   ]
-  constructor() { }
+
+  public jwtToken: JwtToken ={isAuthenticated:null, token:null};
+  public subscription!: Subscription;
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    
     this.getRecent()
+
+    this.subscription = this.authService.jwtToken.subscribe( (jwtToken:JwtToken) => {
+      this.jwtToken = jwtToken
+    })
+  }
+
+  ngOndestroy():void{
+    if(this.subscription){this.subscription.unsubscribe()}
   }
 
   public getRecent():void{
