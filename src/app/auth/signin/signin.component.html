@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="body">
+    <!-- <div class="body">
             <form class="form-container" [formGroup]="form">
                 <p>Connexion à votre compte</p>
                 <div>
@@ -27,6 +27,37 @@
                 </div>
                 <p>Vous n'avez pas encore de compte ? <a href="#" routerLink="/signup"> S’inscrire</a></p>
             </div>
+    </div> -->
+
+    <div class="back">
+        <a href="#" routerLink="/welcome">
+            <span>Back to monday homepage</span>
+        </a>
+    </div>
+
+    <div class="login_container">
+        <!-- <span>Monday</span> -->
+
+        <div class="groupe-form">
+            <div>
+                <app-btn-authenticate></app-btn-authenticate>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <app-btn-authenticate></app-btn-authenticate>
+            </div>
+
+            <p>or Log In with your email and password</p>
+
+            <form class="form-container" [formGroup]="form">
+                <p><input type="email" name="" id="" formControlName="email"></p>
+                <p><input type="password" name="" id="" formControlName="password"></p>
+            </form>
+
+            <button class="btn-login" (click)="submit()">Log In </button>
+        </div>
+
+        <p><a href="">Forgot Password?</a></p>
+        <p>Don’t have an account? <a href="#">Sign up</a></p>
     </div>
 
 </div>

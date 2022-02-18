@@ -1,9 +1,60 @@
-.container{
-    height: 100vh;
-}
-.body{
+
+.container, .login_container, .groupe-form{
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
+}
+
+.login_container, .groupe-form{
     justify-content: center;
     align-items: center;
+
+    span{
+        font-family: Georgia sans-serif;
+        font-size: 25px;
+    }
+}
+
+.back{
+    margin-bottom: 100px;
+    padding: 50px;
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: var(--color-dark_blue);
+    }
+}
+
+.groupe-form{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+//Form
+input{
+    width: 360px;
+    height: 56px;
+    border-radius: 60px;
+    border: 1px solid #ECF0F1;
+    text-align: center;
+}
+
+.btn-login{
+    background-color: var(--color-dark_blue);
+    width: 360px;
+    height: 56px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 60px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+}
+
+
+form{
+    margin: 25px;
 }

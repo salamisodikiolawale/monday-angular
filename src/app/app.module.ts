@@ -27,6 +27,7 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 
 //guards
 import { AuthGuard } from './shares/guards/auth.guard';
+import { BtnAuthenticateComponent } from './shares/components/btn-authenticate/btn-authenticate.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AuthGuard } from './shares/guards/auth.guard';
     SigninComponent,
     SignupComponent,
     WelcomeComponent,
-    LeftSidebarComponent
+    LeftSidebarComponent,
+    BtnAuthenticateComponent
   ],
   imports: [
     BrowserModule,
