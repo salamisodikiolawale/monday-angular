@@ -8,6 +8,7 @@ import { UserSignin,UserSignup } from '../models/user.model';
 //rxj
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,10 @@ export class AuthService {
     token:null
   });
 
-  constructor(private http:HttpClient) { 
+  constructor(
+    private http:HttpClient,
+    private route:Router
+  ) { 
     this.initToken();
   }
 
@@ -43,12 +47,12 @@ export class AuthService {
   }
 
   public signup(credentials: UserSignup): Observable<UserSignup>{
-    return this.http.post<UserSignup>('localhost:3000/auth/login', credentials);
+    return this.http.post<UserSignup>('http://localhost:3000/auth/signup', credentials);
   }
 
   public signin(credentials: UserSignin): Observable<string>{
     
-    return this.http.post<string>('http://localhost:3000/auth/login', credentials).pipe(
+    return this.http.post<string>('http://localhost:3000/auth/signin', credentials).pipe(
       tap((token: string) => {
         token = JSON.stringify(token)
         this.jwtToken.next({
@@ -60,5 +64,13 @@ export class AuthService {
     );
   }
   
+
+  logout():void{
+    localStorage.setItem('jwt', '');
+    this.jwtToken.next({
+      isAuthenticated:null,
+      token:null
+    })
+  }
   
 }

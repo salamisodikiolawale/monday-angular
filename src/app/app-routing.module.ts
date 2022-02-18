@@ -15,12 +15,12 @@ import { AuthGuard } from './shares/guards/auth.guard';
 
 const routes: Routes = [
 
-  { path: '', component: WelcomeComponent },
-  { path: 'espace-travail', component: EspaceTravailComponent },
+  { path: 'espace-travail',canActivate:[AuthGuard], component: EspaceTravailComponent },
   { path: 'espace-projet', canActivate:[AuthGuard], component: EspaceProjetComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'sigin', component: SigninComponent },
+  { path: 'profile', canActivate:[AuthGuard], component: ProfileComponent },
+  { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
+  { path: '**', component: WelcomeComponent },
 ];
 
 @NgModule({

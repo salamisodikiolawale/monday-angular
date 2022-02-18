@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { JwtToken } from '../shares/models/JwtToken.model';
 import { AuthService } from '../shares/services/auth.service';
@@ -72,7 +73,7 @@ export class EspaceProjetComponent implements OnInit {
   public jwtToken: JwtToken ={isAuthenticated:null, token:null};
   public subscription!: Subscription;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private route:Router) { }
 
   ngOnInit(): void {
     
@@ -103,6 +104,9 @@ export class EspaceProjetComponent implements OnInit {
         },
     ]
   }
-
+  logout():void{
+    this.authService.logout();
+    this.route.navigateByUrl('/welcome');
+  }
 
 }

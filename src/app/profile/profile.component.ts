@@ -23,7 +23,6 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.currenteDataUser = this.profileService.getCurrentDataUser();
   }
 
 

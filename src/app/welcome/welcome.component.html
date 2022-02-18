@@ -9,8 +9,8 @@
 
     <div class="btn-group">
         <button>Contact commercial</button>
-        <button routerLink="/sigin">Se connecter</button>
-        <button (click) = "logout()">Se deconnecter</button>
+        <button *ngIf="!jwtToken.isAuthenticated" routerLink="/signin">Se connecter</button>
+        <button *ngIf="jwtToken.isAuthenticated" (click) = "logout()">Se deconnecter</button>
         <button>Commencer ></button>
     </div>
 </header>
