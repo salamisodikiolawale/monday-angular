@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { UserSignup } from '../shares/models/user.model';
+import { UserService } from '../shares/services/user.service';
 // import { DataUser } from '../shares/interfaces/dataUser.interface';
 // import { ProfileService } from '../shares/services/profile.service';
 
@@ -18,11 +21,23 @@ export class ProfileComponent implements OnInit {
     "Préférences",
   ]
 
-  public currenteDataUser?: Observable<null>;
+  public userdatas:BehaviorSubject<UserSignup> = new BehaviorSubject<any>({});
+
   
-  constructor() { }
+  constructor(
+    private userService:UserService
+  ) { }
+
+
+  public findOne(email:string){
+    this.userService.findOne(email).subscribe((userdata:UserSignup) => {      
+        this.userdatas.next(userdata);
+    });
+  }
+
 
   ngOnInit(): void {
+    this.findOne("salamisodikiolawale@gmail.com");
   }
 
 

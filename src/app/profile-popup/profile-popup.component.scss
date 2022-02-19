@@ -1,4 +1,32 @@
 .container{
     position: absolute;
     background-color: white;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: -100px;
+
+    li:hover{
+        cursor: pointer;
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        color:  white;
+        transition: 0.5s;
+        background-color: var(--color-basic_blue);
+    }
+    li{
+        border-radius: 8px;
+        white-space: nowrap;
+        padding: 5px;
+        font-family: sans-serif;
+    }
+}
+
+header, footer{
+    padding: 10px;
+}
+
+section{
+    p{
+        color: var(--color-basic_blue);
+    }
 }

@@ -28,6 +28,7 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 //guards
 import { AuthGuard } from './shares/guards/auth.guard';
 import { BtnAuthenticateComponent } from './shares/components/btn-authenticate/btn-authenticate.component';
+import { UserService } from './shares/services/user.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { BtnAuthenticateComponent } from './shares/components/btn-authenticate/b
     MatIconModule,
     MatRadioModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, UserService],
   
   bootstrap: [AppComponent]
 })

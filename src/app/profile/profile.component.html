@@ -4,7 +4,7 @@
 
         <div class="d-fx fx-column center p-25 m-0">
             <mat-icon  title="Login">supervised_user_circle</mat-icon>
-            <span>SALAMI Sodiki Olawalé</span>
+            <span *ngIf="userdatas | async as user">{{user.name}}</span>
         </div>
     
         <ul class="d-fx align-center m-0">
@@ -22,43 +22,38 @@
 
     <div class="pt-25">
         <h4>Vue d'ensemble</h4>
-        <!-- <div *ngIf="currenteDataUser| async; let currentData;">
-
-            <div>
-                <mat-icon>diverm_identity</mat-icon>
-                <p style="color: red;">{{currentData.name}}</p>
-            </div>    
-        
+        <div *ngIf="userdatas | async as user" >
+            
             <div>
                 <mat-icon>mail_outline</mat-icon>
-                {{currentData.email}}
+                {{user.email}}
             </div>   
         
             <div>
                 <mat-icon>settings_cell</mat-icon>
-                {{currentData.phone}}
+                {{user.phone}}
             </div>   
         
             <div>
                 <mat-icon>public</mat-icon>
-                {{currentData.skype}}
+                {{user.skype}}
             </div>   
         
             <div>
                 <mat-icon>location_on</mat-icon>
-                {{currentData.lieu}}
+                {{user.lieu}}
             </div>  
             
             <div>
                 <mat-icon>location_on</mat-icon>
-                {{currentData.fuseau}}
+                {{user.fuseau}}
             </div>  
         
             <div>
                 <mat-icon>location_on</mat-icon>
-                {{currentData.anniversaire}}
+                {{user.anniversaire}}
             </div>  
-        </div> -->
+        </div>
     
         <hr>
     
