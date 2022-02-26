@@ -1,0 +1,15 @@
+img{
+    max-width: 25px;
+    padding: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}

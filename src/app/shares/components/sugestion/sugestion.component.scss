@@ -1,0 +1,28 @@
+// #suggestion-container, #autres-composants{
+//     background-color: #FFFFFF;
+// }
+
+.explaires-suggestions{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+}
+
+.hover-mode:hover{
+    background-color:var(--color-placeholder_light_gray);
+}
+
+.img-suggestion{
+    max-width: 350px;
+
+}
+
+.Hver:hover{
+    background-color: #FFFFFF;
+}
